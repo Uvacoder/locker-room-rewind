@@ -1,0 +1,7 @@
+{
+  "extends": "@snowpack/app-scripts-svelte",
+  "devOptions": {
+    "port": 8081
+  },
+  "plugins": []
+}
