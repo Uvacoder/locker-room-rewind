@@ -10,16 +10,87 @@
   import { matchesState } from "xstate";
 
   const { state, send } = useMachine(ShowMachine);
-
+  const bugSpring = spring(-40, {stiffness: 0.02, damping: 0.21});
   let bugUp = false;
 
   onMount(() => {
     send("START");
     setTimeout(() => {
       bugUp = true;
-    }, 200);
+      $bugSpring += 45;
+    }, 3000);
   });
 </script>
+
+<main>
+  {#if $state.matches('lower_third_up')}
+    <section
+      class="lower-third-container"
+      in:fly={{ x: 2000, duration: 500 }}
+      out:fly={{ x: -2000, duration: 900 }}>
+      <LowerThird {subjects} />
+    </section>
+  {/if}
+
+  {#if $state.matches('carousel_up')}
+    <section
+      class="carousel-container"
+      in:fly={{ x: 2000, duration: 500 }}
+      out:fly={{ x: -2000, duration: 900 }}>
+      <Carousel
+        loop="true"
+        perPage="1"
+        autoplay="20000"
+        duration="500"
+        easing="ease-out"
+        startIndex="0"
+        dots="false"
+        controls="false">
+        {#each groups as group}
+          <div class="slide-content">
+            {#each group.teams as team, index}
+              <div
+                class="team-container flat"
+                style={index !== 0 ? 'flex-direction: row-reverse; padding-left: 2rem; margin-left: 1rem;' : 'flex-direction: row; padding-right: 2rem; margin-right: 1rem'}>
+                <div
+                  class="team-logo"
+                  style={index !== 0 ? 'border-top-right-radius: 1rem; border-bottom-right-radius: 1rem; border-left: 1px solid #fff;' : 'border-top-left-radius: 1rem; border-bottom-left-radius: 1rem; border-right: 1px solid #fff'}>
+                  <img
+                    src="images/{team.school
+                      .replace(/\s/g, '')
+                      .toLowerCase()}.png"
+                    alt={team.school} />
+                </div>
+                <div
+                  class="team-data"
+                  style={index !== 0 ? 'flex-direction: row-reverse; padding-right: 2rem;' : 'flex-direction: row; padding-left: 2rem;'}>
+                  <div
+                    class="team-info"
+                    style={index !== 0 ? 'text-align: right;' : 'text-align: left;'}>
+                    <h2>{team.school}</h2>
+                    <h1>{team.mascot}</h1>
+                  </div>
+                  <div class="team-score">
+                    <h1>{team.score}</h1>
+                  </div>
+                </div>
+              </div>
+            {/each}
+          </div>
+        {/each}
+      </Carousel>
+    </section>
+  {/if}
+
+  {#if bugUp}
+    <section
+    style="left: {$bugSpring}vmin;"
+      class="bug-container">
+      <img src="images/ChunkyNelms_logo.png" alt="Chunky Nelms Logo" />
+    </section>
+  {/if}
+</main>
+
 
 <style>
   .lower-third-container {
@@ -35,9 +106,9 @@
     align-items: stretch;
   }
   .bug-container {
-    position: absolute;
+    position: relative;
     top: 5vmin;
-    left: 5vmin;
+    /* left: 5vmin; */
     width: 20vmin;
     height: 20vmin;
   }
@@ -140,72 +211,3 @@
     font-size: 7rem;
   }
 </style>
-
-<main>
-  {#if $state.matches('lower_third_up')}
-    <section
-      class="lower-third-container"
-      in:fly={{ x: 2000, duration: 500 }}
-      out:fly={{ x: -2000, duration: 900 }}>
-      <LowerThird {subjects} />
-    </section>
-  {/if}
-
-  {#if $state.matches('carousel_up')}
-    <section
-      class="carousel-container"
-      in:fly={{ x: 2000, duration: 500 }}
-      out:fly={{ x: -2000, duration: 900 }}>
-      <Carousel
-        loop="true"
-        perPage="1"
-        autoplay="20000"
-        duration="500"
-        easing="ease-out"
-        startIndex="0"
-        dots="false"
-        controls="false">
-        {#each groups as group}
-          <div class="slide-content">
-            {#each group.teams as team, index}
-              <div
-                class="team-container flat"
-                style={index !== 0 ? 'flex-direction: row-reverse; padding-left: 2rem; margin-left: 1rem;' : 'flex-direction: row; padding-right: 2rem; margin-right: 1rem'}>
-                <div
-                  class="team-logo"
-                  style={index !== 0 ? 'border-top-right-radius: 1rem; border-bottom-right-radius: 1rem; border-left: 1px solid #fff;' : 'border-top-left-radius: 1rem; border-bottom-left-radius: 1rem; border-right: 1px solid #fff'}>
-                  <img
-                    src="images/{team.school
-                      .replace(/\s/g, '')
-                      .toLowerCase()}.png"
-                    alt={team.school} />
-                </div>
-                <div
-                  class="team-data"
-                  style={index !== 0 ? 'flex-direction: row-reverse; padding-right: 2rem;' : 'flex-direction: row; padding-left: 2rem;'}>
-                  <div
-                    class="team-info"
-                    style={index !== 0 ? 'text-align: right;' : 'text-align: left;'}>
-                    <h2>{team.school}</h2>
-                    <h1>{team.mascot}</h1>
-                  </div>
-                  <div class="team-score">
-                    <h1>{team.score}</h1>
-                  </div>
-                </div>
-              </div>
-            {/each}
-          </div>
-        {/each}
-      </Carousel>
-    </section>
-  {/if}
-
-  {#if bugUp}
-    <section
-      class="bug-container"
-      transition:fly={{ x: -500, duration: 500, delay: 500 }}>
-      <img src="images/ChunkyNelms_logo.png" alt="Chunky Nelms Logo" />
-    </section>
-  {/if}
-</main>
