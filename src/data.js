@@ -1,7 +1,7 @@
 export const subjects = [
   {
-    name: "Jon LongBrett Lang",
-    info: "FCA Representative"
+    name: "Don Coffell",
+    info: "Irion County Head Coach"
   },
   {
     name: "Ryan Reynolds",
@@ -17,111 +17,41 @@ export const groups = [
   {
     teams: [
       {
-        school: 'Sweetwater',
-        mascot: 'Mustangs',
-        score: '58',
+        school: 'Central',
+        mascot: 'Bobcats',
+        score: '0',
       },
+      {
+        school: 'Schertz Clemens',
+        mascot: 'Buffaloes',
+        score: '35',
+      },
+    ],
+  },
+  {
+    teams: [
       {
         school: 'Lake View',
         mascot: 'Chiefs',
-        score: '42',
+        score: '49',
+      },
+      {
+        school: 'Fabens',
+        mascot: 'Wildcats',
+        score: '20',
       },
     ],
   },
   {
     teams: [
       {
-        school: 'SA Cornerstone Christian',
-        mascot: 'Lions',
-        score: '24',
+        school: 'Mason',
+        mascot: 'Punchers',
+        score: '48',
       },
       {
-        school: 'Wall',
-        mascot: 'Hawks',
-        score: '6',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Grape Creek',
-        mascot: 'Eagles',
-        score: '42',
-      },
-      {
-        school: 'TLCA',
-        mascot: 'Eagles',
-        score: '12',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Colorado City',
-        mascot: 'Wolves',
-        score: '2',
-      },
-      {
-        school: 'Ballinger',
-        mascot: 'Bearcats',
-        score: '34',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Brady',
-        mascot: 'Bulldogs',
-        score: '12',
-      },
-      {
-        school: 'Coleman',
-        mascot: 'Bluecats',
-        score: '15',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Christoval',
-        mascot: 'Cougars',
-        score: '22',
-      },
-      {
-        school: 'Sonora',
-        mascot: 'Broncos',
-        score: '14',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Eldorado',
-        mascot: 'Eagles',
-        score: '34',
-      },
-      {
-        school: 'Coahoma',
-        mascot: 'Bulldogs',
-        score: '59',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Miles',
-        mascot: 'Bulldogs',
-        score: '29',
-      },
-      {
-        school: 'Roscoe',
-        mascot: 'Plowboys',
+        school: 'Center Point',
+        mascot: 'Pirates',
         score: '7',
       },
     ],
@@ -129,27 +59,27 @@ export const groups = [
   {
     teams: [
       {
-        school: 'Menard',
-        mascot: 'Yellowjackets',
-        score: '6',
+        school: 'Irion County',
+        mascot: 'Hornets',
+        score: '78',
       },
       {
-        school: 'Ropes',
-        mascot: 'Eagles',
-        score: '33',
+        school: 'Blackwell',
+        mascot: 'Hornets',
+        score: '52',
       },
     ],
   },
   {
     teams: [
       {
-        school: 'San Saba',
-        mascot: 'Armadillos',
-        score: '32',
+        school: 'Sterling City',
+        mascot: 'Eagles',
+        score: '48',
       },
       {
-        school: 'Mason',
-        mascot: 'Punchers',
+        school: 'Eden',
+        mascot: 'Bulldogs',
         score: '0',
       },
     ],
@@ -157,93 +87,9 @@ export const groups = [
   {
     teams: [
       {
-        school: 'Reagan County',
-        mascot: 'Owls',
-        score: '46',
-      },
-      {
-        school: 'Ozona',
-        mascot: 'Lions',
-        score: '13',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Junction',
-        mascot: 'Eagles',
-        score: '50',
-      },
-      {
-        school: 'Iraan',
-        mascot: 'Braves',
-        score: '8',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Veribest',
-        mascot: 'Falcons',
-        score: '32',
-      },
-      {
-        school: 'Robert Lee',
-        mascot: 'Steers',
-        score: '33',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'O\'Donnell',
-        mascot: 'Screamin\' Eagles',
-        score: '6',
-      },
-      {
-        school: 'Sterling City',
-        mascot: 'Eagles',
-        score: '58',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Fort Davis',
-        mascot: 'Indians',
-        score: '6',
-      },
-      {
-        school: 'Irion County',
-        mascot: 'Hornets',
-        score: '51',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Ira',
-        mascot: 'Bulldogs',
-        score: '66',
-      },
-      {
-        school: 'Eden',
-        mascot: 'Bulldogs',
-        score: '18',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Roby',
-        mascot: 'Lions',
-        score: '54',
+        school: 'Hermleigh',
+        mascot: 'Cardinals',
+        score: '55',
       },
       {
         school: 'Bronte',
@@ -255,15 +101,43 @@ export const groups = [
   {
     teams: [
       {
-        school: 'Blackwell',
-        mascot: 'Hornets',
-        score: '22',
+        school: 'Veribest',
+        mascot: 'Falcons',
+        score: '40',
       },
       {
-        school: 'Roscoe Highland',
-        mascot: 'Hornets',
-        score: '42',
+        school: 'Mullin',
+        mascot: 'Bulldogs',
+        score: '60',
       },
     ],
   },
+  {
+    teams: [
+      {
+        school: 'Water Valley',
+        mascot: 'Wildcats',
+        score: '70',
+      },
+      {
+        school: 'Highland',
+        mascot: 'Hornets',
+        score: '32',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Robert Lee',
+        mascot: 'Steers',
+        score: '14',
+      },
+      {
+        school: 'Grady',
+        mascot: 'Wildcats',
+        score: '56',
+      },
+    ],
+  }
 ];

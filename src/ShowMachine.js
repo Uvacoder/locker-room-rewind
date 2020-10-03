@@ -1,13 +1,23 @@
-import { Machine, assign } from 'xstate';
+import { Machine, assign, interpret } from 'xstate';
+import { inspect } from '@xstate/inspect';
+
+inspect({ iframe: false });
 
 export const ShowMachine = Machine({
   id: 'show',
   initial: 'idle',
-  context: {},
+  context: {
+    groupslength: 0,
+  },
   states: {
     idle: {
       on: {
-        START: 'bug_up',
+        START: {
+          target: 'bug_up',
+          actions: [
+            assign({ groupslength: (context, event) => context.groupsLength = event.value })
+          ]
+        },
       }
     },
     bug_up: {
@@ -27,7 +37,7 @@ export const ShowMachine = Machine({
     },
     carousel_up: {
       after: {
-        360000: 'carousel_down', //be sure to check (groups.length * 20000) so this plays all groups before transitioning
+        GROUPS_DELAY: 'carousel_down',
       }
     },
     carousel_down: {
@@ -36,4 +46,16 @@ export const ShowMachine = Machine({
       }
     }
   }
+}, {
+  delays: {
+    GROUPS_DELAY: (context, event) => {
+      return context.groupslength * 20000;
+    }
+  }
 });
+
+const service = interpret(ShowMachine, {
+  devTools: true,
+});
+
+service.start();

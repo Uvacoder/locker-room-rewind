@@ -7,14 +7,14 @@
   import { groups, subjects } from "./data.js";
   import LowerThird from "./LowerThird.svelte";
   import Carousel from "./Carousel.svelte";
-  import { matchesState } from "xstate";
+
 
   const { state, send } = useMachine(ShowMachine);
   const bugSpring = spring(-40, {stiffness: 0.02, damping: 0.21});
   let bugUp = false;
 
   onMount(() => {
-    send("START");
+    send("START", {value: groups.length});
     setTimeout(() => {
       bugUp = true;
       $bugSpring += 45;
@@ -46,7 +46,7 @@
         startIndex="0"
         dots="false"
         controls="false">
-        {#each groups as group}
+        {#each groups as group, index}
           <div class="slide-content">
             {#each group.teams as team, index}
               <div
@@ -131,6 +131,8 @@
     align-items: center;
   }
   .slide-content {
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -139,7 +141,6 @@
     margin: 0 2rem;
     text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
     border-radius: 1rem;
-    margin: 0 2rem;
     border: 2px solid var(--white);
   }
   .gradient {
@@ -163,7 +164,7 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    gap: 2rem;
+    gap: 1rem;
     margin: 0;
     color: #fff;
     border: 2px solid #fff;
@@ -194,6 +195,14 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+  }
+  .team-info {
+    margin: 0;
+    padding: 0;
+  }
+  .team-score {
+    padding: 0;
+    margin: 0;
   }
   h1,
   h2 {
