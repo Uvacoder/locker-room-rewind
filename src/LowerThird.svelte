@@ -10,12 +10,21 @@
 	</div>
 	<section class="subjects-section">
 		{#each subjects as subject, index}
+		{#if index !== 0}
 			<div
 				class="subject"
 				transition:fly={{ delay: index * 100, duration: 300, y: 1500 }}>
 				<h2>{subject.name}</h2>
 				<h3>{subject.info}</h3>
 			</div>
+			{:else}
+			<div
+				class="subject"
+				transition:fly={{ delay: index * 100, duration: 300, y: 1500 }}>
+				<h2>{subject.name}</h2>
+				<h3>{subject.info}</h3>
+			</div>
+		{/if}
 		{/each}
 	</section>
 </article>
@@ -63,6 +72,7 @@
 		justify-content: space-around;
 		align-items: flex-start;
 		flex-grow: 1;
+		margin-right: 4rem;
 	}
 	h2 {
 		font-size: 2.75rem;

@@ -13,6 +13,8 @@
   const bugSpring = spring(-40, {stiffness: 0.02, damping: 0.21});
   let bugUp = false;
 
+  const leftPosition = `${40 / (subjects.length > 1 ? subjects.length * 2 : subjects.length)}vmin`;
+
   onMount(() => {
     send("START", {value: groups.length});
     setTimeout(() => {
@@ -26,6 +28,7 @@
   {#if $state.matches('lower_third_up')}
     <section
       class="lower-third-container"
+      style={'left: ' + leftPosition}
       in:fly={{ x: 2000, duration: 500 }}
       out:fly={{ x: -2000, duration: 900 }}>
       <LowerThird {subjects} />
@@ -96,8 +99,8 @@
   .lower-third-container {
     position: absolute;
     bottom: 5vmin;
-    left: 4vmin;
-    right: 4vmin;
+    /* left: 4vmin; */
+    /* right: 4vmin; */
     margin: 0 3rem 0 2rem;
     height: 15vmin;
     display: flex;
@@ -133,6 +136,19 @@
   .slide-content {
     top: 0;
     bottom: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 2rem;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    border: 2px solid var(--white);
+  }
+  /* .slide-content {
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,7 +158,7 @@
     text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
     border-radius: 1rem;
     border: 2px solid var(--white);
-  }
+  } */
   .gradient {
     background: rgb(255, 255, 255);
     background: linear-gradient(
