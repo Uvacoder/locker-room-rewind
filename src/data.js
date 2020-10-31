@@ -17,126 +17,42 @@ export const groups = [
   {
     teams: [
       {
-        school: 'Central',
-        mascot: 'Bobcats',
-        score: '35',
-      },
-      {
-        school: 'Frenship',
-        mascot: 'Tigers',
+        school: 'Odessa High',
+        mascot: 'Broncos',
         score: '7',
       },
-    ],
-  },
-  {
-    teams: [
       {
-        school: 'Sterling City',
-        mascot: 'Eagles',
+        school: 'Central',
+        mascot: 'Bobcats',
         score: '38',
       },
-      {
-        school: 'Westbrook',
-        mascot: 'Wildcats',
-        score: '28',
-      },
     ],
   },
   {
     teams: [
-      {
-        school: 'Christoval',
-        mascot: 'Cougars',
-        score: '43',
-      },
-      {
-        school: 'Eldorado',
-        mascot: 'Eagles',
-        score: '20',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Andrews',
-        mascot: 'Mustangs',
-        score: '56',
-      },
-      {
-        school: 'Lake View',
-        mascot: 'Chiefs',
-        score: '27',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'TLCA',
-        mascot: 'Eagles',
-        score: '0',
-      },
-      {
-        school: 'Jim Ned',
-        mascot: 'Indians',
-        score: '75',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Bangs',
-        mascot: 'Dragons',
-        score: '48',
-      },
-      {
-        school: 'Sonora',
-        mascot: 'Broncos',
-        score: '14',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Brady',
-        mascot: 'Bulldogs',
-        score: '28',
-      },
-      {
-        school: 'Grape Creek',
-        mascot: 'Eagles',
-        score: '0',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Ballinger',
-        mascot: 'Bearcats',
-        score: '47',
-      },
-      {
-        school: 'Ingram Moore',
-        mascot: 'Warriors',
-        score: '6',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Rocksprings',
-        mascot: 'Angoras',
-        score: '24',
-      },
       {
         school: 'Junction',
         mascot: 'Eagles',
-        score: '16',
+        score: '6',
+      },
+      {
+        school: 'Christoval',
+        mascot: 'Cougars',
+        score: '55',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Eldorado',
+        mascot: 'Eagles',
+        score: '68',
+      },
+      {
+        school: 'Menard',
+        mascot: 'Yellowjackets',
+        score: '7',
       },
     ],
   },
@@ -145,40 +61,96 @@ export const groups = [
       {
         school: 'Miles',
         mascot: 'Bulldogs',
-        score: '57',
+        score: '18',
       },
       {
-        school: 'Menard',
-        mascot: 'Yellowjackets',
-        score: '20',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Ozona',
-        mascot: 'Lions',
-        score: '55',
-      },
-      {
-        school: 'Harper',
-        mascot: 'Longhorns',
-        score: '20',
+        school: 'Rocksprings',
+        mascot: 'Angoras',
+        score: '62',
       },
     ],
   },
   {
     teams: [
       {
-        school: 'Water Valley',
-        mascot: 'Wildcats',
-        score: '56',
+        school: 'Lake View',
+        mascot: 'Chiefs',
+        score: '21',
       },
       {
-        school: 'Eden',
+        school: 'Big Spring',
+        mascot: 'Steers',
+        score: '35',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Wall',
+        mascot: 'Hawks',
+        score: '36',
+      },
+      {
+        school: 'Clyde',
         mascot: 'Bulldogs',
+        score: '13',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'TLCA',
+        mascot: 'Eagles',
         score: '6',
+      },
+      {
+        school: 'Early',
+        mascot: 'Longhorns',
+        score: '52',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Bangs',
+        mascot: 'Dragons',
+        score: '13',
+      },
+      {
+        school: 'Ballinger',
+        mascot: 'Bearcats',
+        score: '25',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Sonora',
+        mascot: 'Broncos',
+        score: '44',
+      },
+      {
+        school: 'Grape Creek',
+        mascot: 'Eagles',
+        score: '14',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Ingram Moore',
+        mascot: 'Warriors',
+        score: '34',
+      },
+      {
+        school: 'Brady',
+        mascot: 'Bulldogs',
+        score: '53',
       },
     ],
   },
@@ -187,11 +159,39 @@ export const groups = [
       {
         school: 'Paint Rock',
         mascot: 'Indians',
-        score: '6',
+        score: '14',
       },
       {
-        school: 'Veribest',
-        mascot: 'Falcons',
+        school: 'Eden',
+        mascot: 'Bulldogs',
+        score: '59',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Westbrook',
+        mascot: 'Wildcats',
+        score: '45',
+      },
+      {
+        school: 'Robert Lee',
+        mascot: 'Steers',
+        score: '0',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Trent',
+        mascot: 'Gorillas',
+        score: '12',
+      },
+      {
+        school: 'Blackwell',
+        mascot: 'Hornets',
         score: '62',
       },
     ],
@@ -199,15 +199,57 @@ export const groups = [
   {
     teams: [
       {
-        school: 'Robert Lee',
-        mascot: 'Steers',
-        score: '0',
+        school: 'Mason',
+        mascot: 'Punchers',
+        score: '27',
       },
+      {
+        school: 'Ozona',
+        mascot: 'Lions',
+        score: '18',
+      },
+    ],
+  },
+  {
+    teams: [
+      {
+        school: 'Veribest',
+        mascot: 'Falcons',
+        score: '8',
+      },
+      {
+        school: 'Irion County',
+        mascot: 'Hornets',
+        score: '57',
+      },
+    ],
+  },
+  {
+    teams: [
       {
         school: 'Highland',
         mascot: 'Hornets',
-        score: '46',
+        score: '58',
+      },
+      {
+        school: 'Bronte',
+        mascot: 'Longhorns',
+        score: '6',
       },
     ],
-  }
+  },
+  {
+    teams: [
+      {
+        school: 'Highland',
+        mascot: 'Hornets',
+        score: '22',
+      },
+      {
+        school: 'Sterling City',
+        mascot: 'Eagles',
+        score: '28',
+      },
+    ],
+  },
 ];
