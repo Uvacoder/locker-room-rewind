@@ -8,6 +8,7 @@ export const ShowMachine = Machine({
   initial: 'idle',
   context: {
     groupslength: 0,
+    cycleCount: 0,
   },
   states: {
     idle: {
@@ -26,6 +27,9 @@ export const ShowMachine = Machine({
       },
     },
     lower_third_up: {
+      actions: [
+        assign({cycleCount: (context) => context.cycleCount = context.cycleCount++})
+      ],
       after: {
         10000: 'lower_third_down'
       },
