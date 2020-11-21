@@ -9,6 +9,7 @@ export const ShowMachine = Machine({
   context: {
     groupslength: 0,
     cycleCount: 0,
+    lowerThirdPlayed: false,
   },
   states: {
     idle: {
@@ -28,7 +29,7 @@ export const ShowMachine = Machine({
     },
     lower_third_up: {
       actions: [
-        assign({cycleCount: (context) => context.cycleCount = context.cycleCount++})
+        assign({ cycleCount: (context) => context.cycleCount = context.cycleCount++ })
       ],
       after: {
         10000: 'lower_third_down'
@@ -46,7 +47,9 @@ export const ShowMachine = Machine({
     },
     carousel_down: {
       after: {
-        1000: 'lower_third_up',
+        1000: {
+          target: 'carousel_up',
+        }
       }
     }
   }

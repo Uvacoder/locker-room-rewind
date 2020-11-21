@@ -19,54 +19,26 @@ export const groups = [
       {
         school: 'Central',
         mascot: 'Bobcats',
-        score: '54',
+        score: '38',
       },
       {
-        school: 'Midland',
-        mascot: 'Bulldogs',
-        score: '31',
+        school: 'Odessa Permian',
+        mascot: 'Panthers',
+        score: '58',
       },
     ],
   },
   {
     teams: [
-      {
-        school: 'Early',
-        mascot: 'Longhorns',
-        score: '7',
-      },
       {
         school: 'Wall',
         mascot: 'Hawks',
-        score: '19',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Breckenridge',
-        mascot: 'Buckeroos',
-        score: '92',
+        score: '27',
       },
       {
-        school: 'TLCA',
-        mascot: 'Eagles',
-        score: '0',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Grape Creek',
-        mascot: 'Eagles',
-        score: '22',
-      },
-      {
-        school: 'Ingram Moore',
-        mascot: 'Warriors',
-        score: '21',
+        school: 'Bushland',
+        mascot: 'Falcons',
+        score: '28',
       },
     ],
   },
@@ -75,26 +47,26 @@ export const groups = [
       {
         school: 'Ballinger',
         mascot: 'Bearcats',
-        score: '42',
+        score: '7',
       },
       {
-        school: 'Sonora',
-        mascot: 'Broncos',
-        score: '0',
+        school: 'Spearman',
+        mascot: 'Lynx',
+        score: '35',
       },
     ],
   },
   {
     teams: [
       {
-        school: 'Brady',
-        mascot: 'Bulldogs',
-        score: '23',
+        school: 'Mason',
+        mascot: 'Punchers',
+        score: '41',
       },
       {
-        school: 'Bangs',
-        mascot: 'Dragons',
-        score: '76',
+        school: 'Kenedy',
+        mascot: 'Lions',
+        score: '18',
       },
     ],
   },
@@ -103,94 +75,38 @@ export const groups = [
       {
         school: 'Christoval',
         mascot: 'Cougars',
-        score: '56',
+        score: '72',
       },
       {
-        school: 'Miles',
-        mascot: 'Bulldogs',
-        score: '6',
+        school: 'Bruni',
+        mascot: 'Badgers',
+        score: '30',
       },
     ],
   },
   {
     teams: [
-      {
-        school: 'Rocksprings',
-        mascot: 'Angoras',
-        score: '54',
-      },
-      {
-        school: 'Menard',
-        mascot: 'Yellowjackets',
-        score: '21',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Johnson City',
-        mascot: 'Eagles',
-        score: '0',
-      },
-      {
-        school: 'Ozona',
-        mascot: 'Lions',
-        score: '20',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Brackettville',
-        mascot: 'Tigers',
-        score: '0',
-      },
-      {
-        school: 'Mason',
-        mascot: 'Punchers',
-        score: '49',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Irion County',
-        mascot: 'Hornets',
-        score: '62',
-      },
-      {
-        school: 'Eden',
-        mascot: 'Bulldogs',
-        score: '38',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Robert Lee',
-        mascot: 'Steers',
-        score: '0',
-      },
       {
         school: 'Sterling City',
         mascot: 'Eagles',
-        score: '76',
+        score: '100',
+      },
+      {
+        school: 'Rankin',
+        mascot: 'Red Devils',
+        score: '88',
       },
     ],
   },
   {
     teams: [
       {
-        school: 'Bronte',
-        mascot: 'Longhorns',
-        score: '0',
+        school: 'Leakey',
+        mascot: 'Eagles',
+        score: '64',
       },
       {
-        school: 'Westbrook',
+        school: 'Water Valley',
         mascot: 'Wildcats',
         score: '46',
       },
@@ -201,26 +117,12 @@ export const groups = [
       {
         school: 'Blackwell',
         mascot: 'Hornets',
-        score: '52',
+        score: '16',
       },
       {
-        school: 'Loraine',
-        mascot: 'Bulldogs',
-        score: '44',
-      },
-    ],
-  },
-  {
-    teams: [
-      {
-        school: 'Paint Rock',
-        mascot: 'Indians',
-        score: '0',
-      },
-      {
-        school: 'Water Valley',
-        mascot: 'Wildcats',
-        score: '60',
+        school: 'Motley County',
+        mascot: 'Matadors',
+        score: '64',
       },
     ],
   }
